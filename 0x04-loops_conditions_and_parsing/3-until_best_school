@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#A Bash script that displays Best School 10 times.
+
+printVar=10
+until [ $printVar -lt 1 ]
+do
+	echo "Best School"
+	printVar=$((printVar - 1))
+done
