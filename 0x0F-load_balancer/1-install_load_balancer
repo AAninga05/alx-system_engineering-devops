@@ -49,13 +49,13 @@ defaults
 
 frontend firstbalance
         bind *:80
+	stats uri /haproxy?stats
         option forwardfor
         default_backend webservers
 backend webservers
         balance roundrobin
         server 69392-web-01 3.85.1.105:80 check
         server 69392-web-02 54.145.81.15:80 check
-        option httpchk
 " >> /etc/haproxy/haproxy.cfg
 
 service haproxy start
